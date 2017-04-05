@@ -1,8 +1,29 @@
+#Shortcuts aka aliases
+
+#Command Line shortcuts:
 alias l="ls -la" # List in long format, includes dot files
 alias ld="ls -ld" # List in long format, only directories
-alias .. ="cd .."
-alias ... = "cd ../.."
-alias ....= "cd ../../.."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias _=sudo
+
+#Git shortcuts
+alias g="git"
+alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gcm="git commit -m"
+alias gpo="git push origin"
+
+#NPM shortcuts
+alias ni="npm install"
+alias nun="npm uninstall"
+alias nup="npm update"
 
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
+
+#Miscellaneous
+alias quit="exit"
+alias week="date +%V"
+alias speedtest="curl -s  https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
