@@ -1,0 +1,24 @@
+#Create a new directory and enter it
+function mk() {
+  mkdir -p "$@" && cd "$_"
+}
+
+#Open man page as PDF
+function manpdf() {
+  man -t "${1}" | open -f -a /Applications/Preview.app/
+}
+
+#Weather
+weather() {
+  local CITY=${1:-Utrecht}
+  curl -4 "wttr.in/$CITY"
+}
+
+#`tre` is short for `tree` with hidden files and color enabled
+#ignores `.git` directory
+#lists directories first
+#`less` with options to preserve color and line numbers
+
+function tre() {
+  tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
